@@ -1,0 +1,41 @@
+.content-one, .content-two{
+    width: 50%;
+}
+
+.content-one{
+    border-right: 2px solid;
+}
+
+.content-two{
+    padding: 20px;
+}
+
+.detail{
+    font-weight: bold;
+}
+
+.content{
+    width: 100%;
+    display: inline-flex;
+}
+
+.title{
+    width: 100%;
+}
+
+#mytab1{
+    width: 80%;
+    text-align: center; 
+}
+
+table tr th{
+    color: white;
+    background: #44b8c6;
+}
+
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 5px;
+  }

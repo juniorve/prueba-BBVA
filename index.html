@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>PruebaBBVA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
+</head>
+
+<body>
+  <div class="main">
+    <h3 class="title">La Pokedex Xanxa</h3>
+    <div class="content">
+      <div class="content-one">
+        <table name="mytab" id="mytab1">
+          <tr>
+            <th>Nombre</th>
+            <th>Acciones</th>
+          </tr>
+        </table>
+      </div>
+      <div class="content-two">
+        <div class="detail">
+          Detalle del Pokemón
+        </div> 
+        <p class="name">nombre</p>
+        <p class="a">Peso:</p>
+        <p class="a">Altura:</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    let data = getList();
+    data.then(res => {
+      for (let i = 0; i < res.results.length; i++) {
+        var pokemon = res.results[i].name;
+        var fila = "<tr><td>" + pokemon + "</td><td><button type='button'>Ver detalle</button>";
+        var btn = document.createElement("tr");
+        btn.innerHTML = fila;
+        document.getElementById("mytab1").appendChild(btn);
+      }
+    })
+  </script>
+</body>
+
+</html>
