@@ -24,25 +24,28 @@
         <div class="detail">
           Detalle del Pokemón
         </div> 
-        <p class="name">nombre</p>
-        <p class="a">Peso:</p>
-        <p class="a">Altura:</p>
+        <div class="info">
+         <p class="label">nombre: </p> <p id="name"></p>
+        </div>
+        <div class="info"><p class="label">Peso: </p><p id="weight"></p></div>
+        <div class="info"><p class="label">Altura: </p><p id="height"></p></div>
       </div>
     </div>
   </div>
 
   <script src="js/app.js"></script>
   <script>
-    let data = getList();
+    const data = getList();
     data.then(res => {
       for (let i = 0; i < res.results.length; i++) {
         var pokemon = res.results[i].name;
-        var fila = "<tr><td>" + pokemon + "</td><td><button type='button'>Ver detalle</button>";
+        var url = res.results[i].url;
+        var fila = "<tr><td>" + pokemon + `</td><td><button onClick="showDetail('${res.results[i].url}')" id="a-${i}" type="button">Ver detalle</button>`;
         var btn = document.createElement("tr");
         btn.innerHTML = fila;
         document.getElementById("mytab1").appendChild(btn);
       }
-    })
+    });
   </script>
 </body>
 

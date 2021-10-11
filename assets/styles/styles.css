@@ -10,15 +10,21 @@
     padding: 20px;
 }
 
-.detail{
+.detail, .info{
     font-weight: bold;
 }
 
-.content{
+#name, #weight, #height{
+    font-weight: 100;
+}
+.content, .info{
     width: 100%;
     display: inline-flex;
 }
 
+.label{
+    margin-right: 5px;
+}
 .title{
     width: 100%;
 }
