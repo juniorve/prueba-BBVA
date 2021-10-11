@@ -8,6 +8,7 @@
 
 .content-two{
     padding: 20px;
+    font-size: 18px;
 }
 
 .detail, .info{
@@ -42,6 +43,13 @@ table tr th{
 
 td, th {
     border: 1px solid #dddddd;
-    text-align: left;
     padding: 5px;
   }
+
+.btn-detail{
+    width: 60%;
+    background: #7bc0e1;
+    color: white;
+    border: none;
+    padding: 5px;
+}

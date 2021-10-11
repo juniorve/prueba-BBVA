@@ -13,7 +13,6 @@ async function getDetail(url) {
 
 function showDetail(url) {
     getDetail(url).then(res => {
-        console.log(res);
         document.getElementById("name").innerHTML = res.name;
         document.getElementById("weight").innerHTML = res.weight;
         document.getElementById("height").innerHTML = res.height;

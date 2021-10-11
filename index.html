@@ -10,7 +10,7 @@
 
 <body>
   <div class="main">
-    <h3 class="title">La Pokedex Xanxa</h3>
+    <h2 class="title">La Pokedex Xanxa!</h2>
     <div class="content">
       <div class="content-one">
         <table name="mytab" id="mytab1">
@@ -40,7 +40,7 @@
       for (let i = 0; i < res.results.length; i++) {
         var pokemon = res.results[i].name;
         var url = res.results[i].url;
-        var fila = "<tr><td>" + pokemon + `</td><td><button onClick="showDetail('${res.results[i].url}')" id="a-${i}" type="button">Ver detalle</button>`;
+        var fila = "<tr><td>" + pokemon + `</td><td><button class="btn-detail" onClick="showDetail('${res.results[i].url}')" id="a-${i}" type="button">Ver detalle</button>`;
         var btn = document.createElement("tr");
         btn.innerHTML = fila;
         document.getElementById("mytab1").appendChild(btn);
